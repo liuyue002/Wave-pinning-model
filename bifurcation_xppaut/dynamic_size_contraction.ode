@@ -1,0 +1,14 @@
+# Dynamic cell size model, contraction case
+
+du/dt =(b+gamma*u^n/(1+u^n))*(w/L-u) - eta*u + u*k*(L-(Lb+Ldiff*(1- (u^n / (uc^n + u^n)) )))/L
+dL/dt=-k*(L-(Lb+Ldiff*(1- (u^n / (uc^n + u^n)) )))
+
+par n=20,k=1,w=15,gamma=0.5,eta=5,uc=4,b=1,Lb=1,Ldiff=2
+init u=1
+init L=1
+
+@ total=2000,xp=T,yp=U,dt=0.01,xlo=0,xhi=2000,ylo=0,yhi=2
+@ MAXSTOR=2000000
+@ nmax=20000,npr=5000,dsmax=0.001,ds=0.001,dsmin=0.0001,parmin=0,parmax=20
+@ autoxmin=0,autoymin=0,autoxmax=20,autoymax=15,autovar=u
+done

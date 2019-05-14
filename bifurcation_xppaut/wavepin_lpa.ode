@@ -1,0 +1,17 @@
+# Wave pinning model, LPA
+
+du/dt=F(u,w-u)
+duL/dt=F(uL,w-u)
+
+F(G,GI)= (k+gamma*G^n/(1+G^n))*GI-eta*G
+
+par w=2,k=1.5,gamma=0.01,n=3,eta=15
+
+init u=1
+init uL=1.5
+
+@ total=2000,xp=T,yp=UL,dt=0.01,xlo=0,xhi=2000,ylo=0,yhi=2
+@ MAXSTOR=2000000
+@ nmax=20000,npr=5000,dsmax=0.01,ds=0.01,parmin=0,parmax=80
+@ autoxmin=0,autoymin=0,autoxmax=80,autoymax=6,autovar=uL
+done

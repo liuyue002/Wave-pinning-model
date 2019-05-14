@@ -1,0 +1,22 @@
+# Actin feedback model, LPA
+
+duL/dt=F(uL,w-u,FactinL)
+du/dt=F(u,w-u,Factin)
+dFactin/dt=eps*(kn*u-ks*Factin)
+dFactinL/dt=eps*(kn*uL-ks*FactinL)
+
+F(a,b,c)=(k0+gamma*a^n/(1+a^n))*b-(eta+s*c/(1+c))*a
+
+par w=2.5,eps=0.1,kn=24,ks=7.5,k0=6,gamma=30,eta=15,s=0.01,n=3
+#par Factin=5
+
+init u=1
+init uL=1
+init Factin=5
+init FactinL=5
+
+@ total=2000,xp=T,yp=UL,dt=0.01,xlo=0,xhi=2000,ylo=0,yhi=2
+@ MAXSTOR=2000000
+@ nmax=20000,npr=5000,dsmax=0.01,ds=0.01,parmin=0,parmax=50
+@ autoxmin=0,autoymin=0,autoxmax=50,autoymax=5,autovar=uL
+done

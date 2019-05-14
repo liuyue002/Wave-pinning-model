@@ -1,0 +1,18 @@
+# Non-conservative model, LPA
+
+u' = (k+gamma*(u^n / (1+u^n) ))*v - eta*u - epc*theta*u
+v' =-(k+gamma*(u^n / (1+u^n) ))*v + eta*u + epc*alpha
+uL'= (k+gamma*(uL^n / (1+uL^n) ))*v - eta*uL - epc*theta*uL
+
+par k=1.5,gamma=0.01,n=3,eta=15,epc=1,alpha=1.5,theta=4.5
+%par k=1,gamma=0.01,n=2,eta=5,epc=1,alpha=1.5,theta=5.5
+
+init u=1
+init v=1
+init uL=1.5
+
+@ total=2000,xp=T,yp=UL,dt=0.01,xlo=0,xhi=2000,ylo=0,yhi=2
+@ MAXSTOR=2000000
+@ nmax=20000,npr=5000,dsmax=0.01,ds=0.01,parmin=0,parmax=200
+@ autoxmin=0,autoymin=0,autoxmax=200,autoymax=8,autovar=uL
+done

@@ -1,0 +1,5 @@
+holmes_wellmix
+u,F
+w,k,gamma,n,eta,s,eps,kn,ks
+u'=(k+gamma*u^n/(1+u^n))*(w-u)-(eta+s*F/(1+F))*u
+F'=eps*(kn*u-ks*F)

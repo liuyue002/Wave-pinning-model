@@ -1,0 +1,5 @@
+dynamic_size_expansion
+u,L
+b,gamma,n,w,eta,k,uc,Lb,Ldiff
+u'=(b+gamma*(u^n / (1+u^n) ))*(w/L-u) - eta*u + u*k*(L-(Lb+Ldiff*(u^n / (uc^n+u^n) )))/L
+L'=-k*(L-(Lb+Ldiff*(u^n / (uc^n+u^n) )))

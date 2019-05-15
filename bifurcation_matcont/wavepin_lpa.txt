@@ -1,0 +1,5 @@
+wavepin__lpa
+u,uL
+w,k,gamma,n,eta
+u'=(k+gamma*(u^n / (1+u^n) ))*(w-u) - eta*u
+uL'=(k+gamma*(uL^n / (1+uL^n) ))*(w-u) - eta*uL

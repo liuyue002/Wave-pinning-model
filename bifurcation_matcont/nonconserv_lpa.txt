@@ -1,0 +1,6 @@
+champ_lpa
+u,v,uL
+k,gamma,n,eta,epc,alpha,theta
+u' = (k+gamma*(u^n / (1+u^n) ))*v - eta*u - epc*theta*u
+v' =-(k+gamma*(u^n / (1+u^n) ))*v + eta*u + epc*alpha
+uL'= (k+gamma*(uL^n / (1+uL^n) ))*v - eta*uL - epc*theta*uL

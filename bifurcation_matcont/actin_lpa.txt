@@ -1,0 +1,7 @@
+holmes_lpa
+u,F,uL,FL
+w,k,gamma,n,eta,s,eps,kn,ks
+u'=(k+gamma*u^n/(1+u^n))*(w-u)-(eta+s*F/(1+F))*u
+F'=eps*(kn*u-ks*F)
+uL'=(k+gamma*uL^n/(1+uL^n))*(w-u)-(eta+s*FL/(1+FL))*uL
+FL'=eps*(kn*uL-ks*FL)

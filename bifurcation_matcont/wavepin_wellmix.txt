@@ -1,0 +1,4 @@
+wavepin_wellmix
+u
+w,k,gamma,n,eta
+u'=(k+gamma*(u^n / (1+u^n) ))*(w-u) - eta*u

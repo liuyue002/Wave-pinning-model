@@ -28,8 +28,8 @@ set(gca,'YTick',xTick);
 set(gca,'YTickLabel',xTickLabel);
 xlabel('t');
 ylabel('x');
-%biggerFont(gca);
-%tightfig(fig);
+biggerFont(gca);
+tightfig(fig);
 
 end
 

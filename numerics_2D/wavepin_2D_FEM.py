@@ -1,6 +1,4 @@
 # Finite elements method for simulating the wave pinning model in 2D.
-# Uses the FEniCS library (https://fenicsproject.org/)
-# Recommend using Docker for installation
 
 from __future__ import print_function
 from fenics import *

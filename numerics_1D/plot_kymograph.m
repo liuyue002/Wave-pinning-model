@@ -21,15 +21,13 @@ umin=floor(umin*10)/10;
 ucolortick=[umin,umax];
 imagesc(uu',ucolortick);
 set(gca,'YDir','normal');
-colorbar('FontSize',40,'TickLabels',ucolortick,'Ticks',ucolortick);
+colorbar('TickLabels',ucolortick,'Ticks',ucolortick);
 set(gca,'XTick',tTick);
 set(gca,'XTickLabel',tTickLabel);
 set(gca,'YTick',xTick);
 set(gca,'YTickLabel',xTickLabel);
 xlabel('t');
 ylabel('x');
-biggerFont(gca);
-tightfig(fig);
 
 end
 

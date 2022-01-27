@@ -5,15 +5,15 @@
 drawperframe=50; % update the animation once per 50 iterations
 nx=400; % number of spatial discretization points
 dx=1/nx;
-T=1; % total time for the simulation
+T=2; % total time for the simulation
 dt=0.0002; % time discretization
 nt=T/dt+1;
 nFrame=ceil((T/dt)/drawperframe);
 
 %% Model parameters
-LL=20^2; delta=0.01; k0=1.0*LL; gamma=18.5*LL; n=2; eta=5.2*LL;
-c=1; theta=5.5*LL; alpha=1.5*LL;
-s=40*LL; epsilon=0.1; kn=24*LL; ks=7.5*LL;
+LL=10^2; delta=0.01; k0=1.5*LL; gamma=30*LL; n=3; eta=15*LL;
+c=0; theta=5.5*LL; alpha=1.5*LL;
+s=18*LL; epsilon=0.1; kn=24*LL; ks=7.5*LL;
 
 %% Set up
 
@@ -54,6 +54,7 @@ Tv=speye(nx)-th*dt*A;
 for ti=1:1:nt
     if (mod(ti, drawperframe) == 1)
         cla;
+        iFrame=(ti-1)/drawperframe+1;
         hold on;
         plot(x,u); plot(x,v); plot(x,F);
         legend('u','v','F');
@@ -74,6 +75,7 @@ for ti=1:1:nt
     F=Fnew; u=unew; v=vnew;
 end
 
+fig_pos=[200,200,500,500];
 figu=plot_kymograph(uu, fig_pos, T);
 figv=plot_kymograph(vv, fig_pos, T);
 figF=plot_kymograph(ff, fig_pos, T);
